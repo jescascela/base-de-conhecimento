@@ -299,8 +299,8 @@ return [
             'url'   => 'posts',
         ],
         [
-            'text'  => 'Tutoriais',
-            'url'   => 'tutorials'
+            'text'  => 'Manuais',
+            'url'   => 'manuals'
         ],
         [
             'text'  => 'Projetos',

@@ -24,7 +24,7 @@
                     <td>
                     <form action="{{ url('posts/' . $post->id) }}" method="post">
                         @csrf
-                        <input type="hidden" name="postID" value="{{ $post->id }}">
+                        {{-- <input type="hidden" name="postID" value="{{ $post->id }}"> --}}
                         <button type="submit" class="btn btn-primary float-right">Acessar</button>
                     </form>
                     </td>
