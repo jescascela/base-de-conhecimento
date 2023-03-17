@@ -27,8 +27,8 @@
           <div class="col-sm">
             <div class="small-box bg-gradient-success">
                 <div class="inner">
-                    <h3>0</h3>
-                    <p>Tutoriais</p>
+                    <h3>{{ $files }}</h3>
+                    <p>Manuais</p>
                 </div>
                 <div class="icon">
                     <i class="fas fa-user-plus"></i>

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Post;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class HomeController extends Controller
 {
@@ -14,7 +15,8 @@ class HomeController extends Controller
         if(Auth::check())
         {
             $posts = DB::table('posts')->count();
-            return view('home', ['posts' => $posts]);
+            $files = Storage::files('manuals');
+            return view('home', ['posts' => $posts, 'files' => count($files)]);
         }
 
         return view('auth/login');
