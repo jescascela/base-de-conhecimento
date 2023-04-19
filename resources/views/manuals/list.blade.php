@@ -14,7 +14,7 @@
 @section('content')
     <table class="table">
         <tbody>
-            @foreach ($manuals as $manual)
+            @forelse ($manuals as $manual)
                 <tr>
                     <td>{{ basename($manual) }}</td>
                     <td>
@@ -31,9 +31,12 @@
                         </div>
                     </td>
                 </tr>
-            @endforeach
+                @empty
+                <p>Não há manuais cadastrados</p>
+            @endforelse
         </tbody>
     </table>
+    @if(isset($manual))
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -52,6 +55,7 @@
             </div>
         </div>
     </div>
+    @endif
 @stop
 
 
